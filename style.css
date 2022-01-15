@@ -36,6 +36,7 @@
 
 /* Desktop Styling */
 body {
+  scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
 }
 
@@ -59,6 +60,7 @@ header {
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 1.5rem;
 }
 
 .header {
@@ -256,7 +258,7 @@ span.count-down {
 }
 
 /* Mobile Styling */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   header {
     height: auto;
     background: var(--white);
@@ -264,7 +266,7 @@ span.count-down {
   }
 
   .wrapper {
-    max-width: calc(100vw - 3rem);
+    max-width: calc(100vw);
     margin: 0 auto;
   }
 
@@ -296,6 +298,76 @@ span.count-down {
 
   .card {
     grid-template-columns: auto;
-    gap: 1.5rem;
+  }
+}
+
+/* Tablet Styling */
+@media screen and (min-width: 501px) and (max-width: 999px) {
+  header {
+    height: auto;
+    background: var(--white);
+  }
+
+  .wrapper {
+    max-width: calc(100vw);
+    margin: 0 auto;
+  }
+
+  .header {
+    flex-direction: column;
+  }
+
+  hr {
+    visibility: unset;
+    margin: 1.5rem 0;
+  }
+
+  .dark-mode {
+    justify-content: space-between;
+  }
+
+  .dark-mode span {
+    font-weight: 700;
+    color: var(--dark-grayish-blue);
+  }
+
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Desktop */
+@media screen and (min-width: 1000px) and (max-width: 1439px) {
+  .wrapper {
+    max-width: calc(100vw);
+    margin: 0 auto;
+  }
+  .main {
+    margin-top: -8%;
+  }
+
+  .card {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* No Render on Less Than 240px */
+@media screen and (max-width: 239px) {
+  body {
+    visibility: hidden;
+  }
+
+  html::before {
+    content: "Sorry! This website can't be rendered on screens less than 240px.";
+    visibility: unset;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 180px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: var(--count-down);
   }
 }
