@@ -21,7 +21,7 @@
 }
 
 /* Dark Theme Colors */
-.dark-theme {
+[data-mode="dark"] {
   --bg-top: hsl(232, 19%, 16%);
   --bg-bottom: hsl(225, 17%, 14%);
   --bg-card: hsl(228, 29%, 20%);
@@ -32,7 +32,7 @@
 }
 
 /* Light Theme Colors */
-.light-theme {
+[data-mode="light"] {
   --bg-top: hsl(225, 100%, 98%);
   --bg-bottom: hsl(0, 0%, 100%);
   --bg-card: hsl(227, 47%, 96%);
