@@ -1,3 +1,39 @@
+const body = document.body;
+const toggleBtn = document.querySelector("input[type='checkbox']");
+
+if (toggleBtn.checked) {
+  body.classList.add("dark-theme");
+} else {
+  body.classList.add("light-theme");
+}
+
+function darkModeToggle() {
+  if (toggleBtn.checked) {
+    body.classList.remove("light-theme");
+    body.classList.add("dark-theme");
+  } else {
+    body.classList.remove("dark-theme");
+    body.classList.add("light-theme");
+  }
+}
+
+toggleBtn.addEventListener("change", darkModeToggle);
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 // Subs & Followers Card Template Part
 {
   /* <div class="card-wrapper facebook">
