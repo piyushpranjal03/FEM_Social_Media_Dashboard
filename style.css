@@ -13,7 +13,11 @@
   --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youtube: hsl(348, 97%, 39%);
 
-  --dark-mode-on: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --dark-mode-on: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%),
+    hsl(146, 68%, 55%)
+  );
   --dark-mode-off: hsl(230, 22%, 74%);
 
   --white: hsl(60, 100%, 100%);
@@ -142,7 +146,7 @@ main {
 }
 
 .main {
-  height: 70vh;
+  /* height: 70vh; */
   position: relative;
   top: -10vh;
 }
@@ -152,6 +156,9 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem 2rem;
+}
+
+.card:not(:last-child) {
   padding-bottom: 4rem;
 }
 
@@ -309,7 +316,7 @@ span.count-down {
   .main {
     top: unset;
     height: unset;
-    /* min-height: 70vh; */
+    padding-bottom: 4rem;
   }
 
   .card {
@@ -351,6 +358,7 @@ span.count-down {
     top: unset;
     height: unset;
     /* min-height: 70vh; */
+    padding-bottom: 4rem;
   }
 
   .card {
